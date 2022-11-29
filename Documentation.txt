@@ -1,0 +1,31 @@
+created 5 classes
+1-2 : Data and Places : are the classes as json and have the variables & setters&getters for them.
+
+3 : ErrorHandling : for errors
+
+
+4 : ReadF : which contains the search function that search from a file a word and check if it's unique.
+	
+		created a listOfWords  to save the unique words in.
+		scan number of words , the words
+		Intialized the word Array to containe the words from a txt file
+		Created a FileReader object with my file name (java)
+		Created a BufferedReader object
+		while((s=br.readLine())!=null)   >> to read Content from the txt file
+		words=s.split(" ");  >> to split the word using space
+		if (word.equals(input))   >> Search for the given word it's equal to a word in txt file
+		count++;   >>  increase count by one if the word is present
+		if condition to check if the count is 1 , then it's unique , else it's repeated or 0 
+
+
+		to check the duplications and remove them from the list:
+		
+ 		 Set<String> set = new LinkedHashSet<>();
+  		set.addAll(listOfWords); >> convert the arraylist into a set
+
+  		
+  		listOfWords.clear(); >> delete al elements of arraylist
+
+  		
+ 		 listOfWords.addAll(set); >> add element from set to arraylist
+ 		 System.out.println("\n unique words : "+listOfWords+"\n");

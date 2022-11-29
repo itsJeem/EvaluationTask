@@ -1,0 +1,1 @@
+{"country":"United States","places":[{"longitude":"-118.4065","state":"California","latitude":"34.0901"}]}
