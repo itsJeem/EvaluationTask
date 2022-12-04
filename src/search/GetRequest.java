@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 import java.util.Map;
 import java.util.Scanner;
 import com.google.gson.Gson;
-//yuiiyu
+
 public class GetRequest {
 	public static void main(String[] args) throws IOException, InterruptedException {
 

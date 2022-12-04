@@ -1,5 +1,6 @@
 package search;
 
+import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -10,12 +11,10 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-public class ReadF {
-	public static void search() throws IOException 
-	   {
+public class Reading {
+
+	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
-		
-    
 		String input = null;
 		Set<String> set = new LinkedHashSet<>();
 		String[] words;
@@ -25,9 +24,13 @@ public class ReadF {
 
 		System.out.println("Enter words  :");
 		boolean tr = true;
+		 
 		while (tr) {
 			input = sc.next();
-			if ("stop".equalsIgnoreCase(input)) {
+			 
+			char c=' ';
+			c=input.charAt(0);
+			if ( c == 27) {
 				break;
 			}
 			listOfAllWords.add(input);
@@ -59,10 +62,10 @@ public class ReadF {
 			}
 
 			fr.close();
-			
+			count = 0;
 		}
 
 
-		System.out.println("\nUnique words : " + set + "\n");
-}
+		System.out.println("\n unique words : " + set + "\n");
+	}
 }

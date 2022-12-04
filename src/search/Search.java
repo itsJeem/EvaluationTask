@@ -32,6 +32,7 @@ public class Search {
 	
 	System.out.println("Enter name of .txt file you wanna display: ");
 	String fileName2 = sc.next();
+
 	try {
 		Reader reader = Files.newBufferedReader(Paths.get(fileName2 + ".txt"));
 		Map<?, ?> map = gson.fromJson(reader, Map.class);
