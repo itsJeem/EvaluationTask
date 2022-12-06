@@ -11,10 +11,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
 import java.util.Scanner;
+
+import org.apache.pdfbox.exceptions.COSVisitorException;
+
 import com.google.gson.Gson;
 
 public class GetRequest {
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args) throws IOException, InterruptedException, COSVisitorException {
 
 //		String path="http://api.zippopotam.us/us/90210";
 
@@ -68,6 +71,12 @@ public class GetRequest {
 			case 4:
 				System.out.println("exiting . . . . ");
 				bool = false;
+				break;
+				
+				
+			case 5:
+				PdfRead pr = new PdfRead();
+//				pr.pdfRead();
 				break;
 			}
 

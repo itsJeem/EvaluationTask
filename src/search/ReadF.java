@@ -14,14 +14,28 @@ public class ReadF {
 	public static void search() throws IOException 
 	   {
 		Scanner sc = new Scanner(System.in);
-		
     
 		String input = null;
 		Set<String> set = new LinkedHashSet<>();
 		String[] words;
 		List<String> listOfAllWords = new ArrayList<>();
-		System.out.println("Enter name of .txt file you wanna search from: ");
-		String fileName = sc.next();
+		
+		System.out.println("Enter your file type: \n 1. pdf \n 2. txt ");
+		Integer fileType = sc.nextInt();
+		
+			String fileName = null;	
+		if (fileType == 1) {
+		System.out.println("Enter name of .pdf file you wanna search from: ");
+		 fileName = sc.next() + ".pdf";
+		 System.out.println(fileName);
+		}
+		
+		else if (fileType == 2) {
+			System.out.println("Enter name of .txt file you wanna search from: ");
+			 fileName = sc.next() + ".txt";
+			 System.out.println(fileName);
+		}
+		
 
 		System.out.println("Enter words  :");
 		boolean tr = true;
@@ -37,7 +51,8 @@ public class ReadF {
 		System.out.println("Input list: " + listOfAllWords);
 
 		for (String sf : listOfAllWords) {
-			FileReader fr = new FileReader(fileName + ".txt");
+	
+			FileReader fr = new FileReader(fileName);
 			BufferedReader br = new BufferedReader(fr);
 			int count = 0;
 			String s;
