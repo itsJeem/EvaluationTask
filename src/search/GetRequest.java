@@ -12,12 +12,11 @@ import java.nio.file.Paths;
 import java.util.Map;
 import java.util.Scanner;
 
-import org.apache.pdfbox.exceptions.COSVisitorException;
 
 import com.google.gson.Gson;
 
 public class GetRequest {
-	public static void main(String[] args) throws IOException, InterruptedException, COSVisitorException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 
 //		String path="http://api.zippopotam.us/us/90210";
 
